@@ -1,0 +1,65 @@
+/* ======================================
+    MediaQuery-Reporter Styles
+========================================= */
+
+@media only screen and (min-width: 400px) {
+    select,input {
+      display:block;
+    }
+}
+
+/* Stretched out */
+@media only screen and (min-width: 925px) {
+
+    select,input {
+      display:inline;
+    }
+
+    input[type="text"] {
+      margin: 5px 96px 15px 0px;
+    }
+
+    input[type="email"] {
+      margin: 5px 29px 15px 0px;
+    }
+
+    select {
+      margin: 5px 29px 15px 0px;
+    }
+
+    input[type="submit"] {
+      display:block;
+    }
+    
+}
+
+/* Multiple columns in one line */
+@media only screen and (min-width: 1100px) {
+    select,input {
+      display:block;
+    }
+
+    #studentInfo {
+    	float: left;
+        width: 48%;
+	margin: 0px 10px 10px 10px;
+    }
+
+    #eventChoices {
+    	overflow: hidden; 
+        width: 48%;
+	margin: 0px 10px 10px 10px;
+    }
+
+    #parentInfo {
+	float: left;
+        width: 48%;
+	margin: 0px 10px 10px 10px;
+    }
+
+    #permissionInfo {
+	overflow: hidden;
+        width: 48%;
+	margin: 0px 10px 10px 10px;
+    }
+}
