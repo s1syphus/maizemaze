@@ -1,50 +1,42 @@
 <!DOCTYPE html>
 
-<!--First version of the webpage to enter questions -Mike-->
+<!--
+
+	Mockup of the web question interface
+
+	My html is probably terrible, I'll fix it up later. I have a few pages linking together just for organizational purposes. We should discuss the right way to do things soon.
+
+	Click on the Add questions button to see the interface we discussed, it's messy but I think it looks roughly the way it should
+
+	-Mike
+	
+
+-->
+
+
 
 <html>
-<header>
-	<title> MaizeMaze </title>
-</header>
-
 <body>
-</body>	
 
-<div id="question">
-	<div id="questionheader">
-		<h2> Enter Questions </h2>
-	</div>
-	<div id="enterquestion">
-		<fieldset>
-			<!--Add alignment stuff soon-->
-			<label>Question:</label>
-			<input type="text" name="questionEntered"
-				placeholder="Type your question" required>
-			<label>Difficulty Level (1-120):</label>
-			<input type="number" name="difficulty"
-				min="1" max="120" required>
-				<br>
-			<label>Correct Answer:</label>
-			<input type="text" name="correctAnswer"
-				placeholder="Enter Correct answer" required>
-				<br>
-			<label>Possible Answer 1:</label>
-			<input type="text" name="wrongAnswer1"
-				placeholder="Enter possible answer" required>
-				<br>
-			<label>Possible Answer 2:</label>
-			<input type="text" name="wrongAnswer2"
-				placeholder="Enter possible answer" required>
-				<br>
-			<label>Possible Answer 3:</label>
-			<input type="text" name="wrongAnswer3"
-				placeholder="Enter possible answer" required>
-				<br>
-		</fieldset>
-		<input type="submit" value="Enter another question"/>
-		<input type="submit" value="Save and quit"/>
-	</div>
-</div>
+	<h1> Welcome to MaizeMaze's Web Interface </h1>
+
+
+<form method="link" action="enterQuestions.html">
+<input type="submit" value="Add Questions to Database"/>
+</form>
+
+<form method="link" action="examineQuestions.html">
+	<input type="submit" value="Examine Database Questions"/>
+</form>
+
+<form method="link" action="prettyAnalytics.html">
+	<input type="submit" value="Show me the Pretty Analytics"/>
+</form>
+
+</body>
 
 
 </html>
+
+
+
