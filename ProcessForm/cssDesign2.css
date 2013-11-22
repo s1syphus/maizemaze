@@ -1,0 +1,226 @@
+@media only screen and (min-width: 300px) {
+    select,input {
+      display:block;
+    }
+}
+
+@media only screen and (min-width: 975px) {
+    select,input {
+      display:inline;
+    }
+
+    input[type="text"] {
+      margin: 5px 96px 15px 0px;
+    }
+
+    input[type="email"] {
+      margin: 5px 29px 15px 0px;
+    }
+
+    select {
+      margin: 5px 29px 15px 0px;
+    }
+    
+    input[type="submit"]{
+        display:block;
+    }
+}
+
+
+:invalid { 
+  border-color: #e88;
+  border-radius: 5%;
+  -webkit-box-shadow: 0 0 5px rgba(255, 200, 0, .8);
+  -moz-box-shadow: 0 0 5px rbba(255, 200, 0, .8);
+  -o-box-shadow: 0 0 5px rbba(255, 200, 0, .8);
+  -ms-box-shadow: 0 0 5px rbba(255, 200, 0, .8);
+  box-shadow:0 0 5px rgba(255, 200, 0, .8);
+}
+
+:required {
+  border-color: #FF3300;
+  border-radius: 5%;
+  -webkit-box-shadow: 0 0 5px rgba(200, 0, 255, .5);
+  -moz-box-shadow: 0 0 5px rgba(200, 0, 255, .5);
+  -o-box-shadow: 0 0 5px rgba(200, 0, 255, .5);
+  -ms-box-shadow: 0 0 5px rgba(200, 0, 255, .5);
+  box-shadow: 0 0 5px rgba(200, 0, 255, .5);
+}
+
+body{
+  background:#EBEB33;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border:1px 1px 1px 1px solid #B20000;
+  font-size:20px;
+  min-height:30px;
+  display:block;  
+
+}
+
+#content{
+  margin: 10px;
+  padding: 10px;
+  background:#EBEB33;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border:5px solid #B20000;
+  border-radius: 20%;
+  font-size:20px;
+  min-height:30px;
+  display:block;
+}
+
+form {
+  margin-left: -20px;
+  margin-right: -20px;
+  background:#EBEB33;
+  padding: 20px;
+  float: left;
+  border: 5px solid; 
+  border-color: #0000FF ;
+  border-radius: 35%;
+
+}
+textarea{
+  width: 97%;
+  min-height: 100px;
+  border: 3px solid #0000FF;
+  border-radius: 5%;
+  padding: 5px;
+  font-family: Tahoma, sans-serif;
+  background-color: #FFFFFF;
+  font-size:20px;
+
+}
+select.inl{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border:1px solid #ccc;
+  font-size:20px;
+  /*width:300px; */
+  min-height:30px;
+  display:inline;
+  margin-bottom:15px;
+  margin-top:5px;
+  outline: none;
+
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -o-border-radius:5px;
+  -ms-border-radius:5px;
+  border-radius:5px;
+}
+
+select,input {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border:1px solid #ccc;
+  font-size:20px;
+  /*width:300px; */
+  min-height:30px;
+  //display:block;
+  margin-bottom:15px;
+  margin-top:5px;
+  outline: none;
+
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -o-border-radius:5px;
+  -ms-border-radius:5px;
+  border-radius:5px;
+}
+
+input[type=radio], input[type=time]{
+  background:none;
+  display:inline;
+  width: 20px;
+  border-color: #000000;
+}
+
+input[type=number]{
+  background:none;
+  width: 50px;
+}
+input[type=checkbox]{
+  background:none;
+  display:inline;
+  margin-top:-3px;
+  padding:0px;
+}
+input[type=submit]{
+  background:#000000; 
+  text-align:center;
+  color:#EBEB33;
+  margin-left: 45%;   
+  margin-right: 45%; 
+}
+
+h3{
+        margin-bottom: 1px;
+}
+
+h2{
+         background:#B20000; 
+         color:#FFFFFF;
+         margin-left: auto;   
+        margin-right: auto; 
+        text-align: center;
+
+}
+
+h1{
+      background:#0000FF;
+      color:#FFFFFF;
+      text-align: center;
+}
+
+
+.gone
+{
+    display : none;
+}
+
+.back
+{
+    display : visible;
+}
+
+
+
+/*----------------------------------------New Code Miguel*/
+
+#shirtInfo{
+    background-color: rgba(1, 61, 44, 0.7);
+    border:5px solid #B20000;
+    color:#FFFFFF;
+}
+
+#studentContent {
+    display:none;
+    background-color: rgba(1, 61, 44, 0.7);
+    border:5px solid #B20000;
+    color:#FFFFFF;
+}
+
+#eventContent {
+    display:none;
+    background-color: rgba(1, 61, 44, 0.7);
+    border:5px solid #B20000;
+    color:#FFFFFF;
+}
+
+#parentContent {
+    display:none;
+    background-color: rgba(1, 61, 44, 0.7);
+    border:5px solid #B20000;
+    color:#FFFFFF;
+}
+
+#permissionContent {
+    display:none;
+    background-color: rgba(1, 61, 44, 0.7);
+    border:5px solid #B20000;
+    color:#FFFFFF;
+}
+
+
+
+
+/*----------------------------------------New Code Miguel end*/

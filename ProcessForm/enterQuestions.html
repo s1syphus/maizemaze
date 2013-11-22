@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<!--
+
+	This is where the magic happens (not really but I'm not in charge of the php/DB stuff.
+
+	-Mike
+
+	-->
+
+
+<html>
+<body>
+<div id="question">
+	<div id="questionheader">
+		<h2> Enter Questions </h2>
+	</div>
+	<div id="enterquestion">
+<form method="post"
+      enctype="application/x-www-form-urlencode"
+      action="process.php"
+      name="WSORform" novalidate>
+		<fieldset>
+			<!--Add alignment stuff soon-->
+			<label>Question:</label>
+			<input type="text" name="questionEntered"
+				placeholder="Type your question" required>
+			<label>Difficulty Level (1-120):</label>
+			<input type="number" name="difficulty"
+				min="1" max="120" required>
+				<br>
+			<label>Correct Answer:</label>
+			<input type="text" name="correctAnswer"
+				placeholder="Enter Correct answer" required>
+				<br>
+			<label>Possible Answer 1:</label>
+			<input type="text" name="wrongAnswer1"
+				placeholder="Enter possible answer" required>
+				<br>
+			<label>Possible Answer 2:</label>
+			<input type="text" name="wrongAnswer2"
+				placeholder="Enter possible answer" required>
+				<br>
+			<label>Possible Answer 3:</label>
+			<input type="text" name="wrongAnswer3"
+				placeholder="Enter possible answer" required>
+				<br>
+		</fieldset>
+		<input type="submit" value="Enter another question"/>
+<!--
+<form method="link" action="index.html">
+			<input type="submit" value="Save and quit"/>
+		</form>
+-->
+</form>
+
+
+	</div>
+</div>
+
+</body>
+
+</html>
