@@ -21,10 +21,9 @@
 
 	<h2> Questions are displayed below </h2>
 
-	<p> check it </p>
 <?php 
    echo "Hello World";
-   echo "\n";
+   echo '\n';
    // connects to mysql server 
    $db = mysql_connect("localhost", "root", "root");
 

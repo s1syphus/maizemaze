@@ -1,30 +1,18 @@
 <!DOCTYPE html>
 
-<!--
-
-
-	This is where you can delete/edit questions or whatever
-
-
--->
-
 <html>
 
 <head>
 
-<title> Check the questions </title>
+<title>You're not suppose to be here</title>
 
 </head>
 
 <body>
 
-
-	<h2> Questions are displayed below </h2>
-
-	<p> check it </p>
 <?php 
-   echo "Hello World";
-   echo "\n";
+
+
    // connects to mysql server 
    $db = mysql_connect("localhost", "root", "root");
 
@@ -52,28 +40,31 @@
    die($message);
    }
 
-   // display results 
+   // getting results
+   $qListArr;
+
    while ($row = mysql_fetch_assoc($result)){
-   echo $row['question'];
-   echo '\n';
-   echo $row['correctAns'];
-   echo '\n';
-   echo $row['wrongAns1'];
-   echo '\n';
-   echo $row['wrongAns2'];
-   echo '\n';
-   echo $row['wrongAns3'];
-   echo '\n';
-   echo '\n';
+   $qArr = array($row['id']);
+
+   array_push($qArr, $row['question']);
+   
+   array_push($qArr, $row['correctAns']);
+
+   array_push($qArr, $row['wrongAns1']);
+
+   array_push($qArr, $row['wrongAns2']);
+
+   array_push($qArr, $row['wrongAns3']);
+
+   array_push($qListArr, $qArr);
+
    }
+
+   print_r($qListArr);
  
    mysql_free_result($result);
 
 ?>
-
-	<form method="link" action="index.html">
-		<input type="submit" value="Back to main menu"/>
-	</form>
 
 </body>
 

@@ -16,6 +16,10 @@
 		<h2> Enter Questions </h2>
 	</div>
 	<div id="enterquestion">
+<form method="post"
+      enctype="application/x-www-form-urlencode"
+      action="process.php"
+      name="WSORform" novalidate>
 		<fieldset>
 			<!--Add alignment stuff soon-->
 			<label>Question:</label>
@@ -43,9 +47,14 @@
 				<br>
 		</fieldset>
 		<input type="submit" value="Enter another question"/>
-		<form method="link" action="index.html">
+<!--
+<form method="link" action="index.html">
 			<input type="submit" value="Save and quit"/>
 		</form>
+-->
+</form>
+
+
 	</div>
 </div>
 

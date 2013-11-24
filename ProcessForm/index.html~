@@ -16,14 +16,6 @@
 
 
 <html>
-
-<head>
-
-<title> index </title>
-
-</head>
-
-
 <body>
 
 	<h1> Welcome to MaizeMaze's Web Interface </h1>
@@ -33,7 +25,7 @@
 <input type="submit" value="Add Questions to Database"/>
 </form>
 
-<form method="link" action="examineQuestions.php">
+<form method="link" action="examineQuestions.html">
 	<input type="submit" value="Examine Database Questions"/>
 </form>
 

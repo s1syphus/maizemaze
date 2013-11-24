@@ -21,10 +21,9 @@
 
 	<h2> Questions are displayed below </h2>
 
-	<p> check it </p>
 <?php 
-   echo "Hello World";
-   echo "\n";
+
+
    // connects to mysql server 
    $db = mysql_connect("localhost", "root", "root");
 
@@ -55,16 +54,18 @@
    // display results 
    while ($row = mysql_fetch_assoc($result)){
    echo $row['question'];
-   echo '\n';
+   echo "?";
+   echo "<br>";
    echo $row['correctAns'];
-   echo '\n';
+   echo " : ";
    echo $row['wrongAns1'];
-   echo '\n';
+   echo " : ";
    echo $row['wrongAns2'];
-   echo '\n';
+   echo " : ";
    echo $row['wrongAns3'];
-   echo '\n';
-   echo '\n';
+   echo "<br>";
+   echo "<br>";
+
    }
  
    mysql_free_result($result);
