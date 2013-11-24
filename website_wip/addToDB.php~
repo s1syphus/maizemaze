@@ -1,5 +1,13 @@
 <?php
-//This will be inserted into it's own php-----
+
+   $qArr = array();
+   foreach($_POST as $name => $value) {
+      array_push($qArr, $value);
+   }
+
+   //print_r($qArr); //for testing
+	
+   //This will be inserted into it's own php-----
    // connects to mysql server 
    $db = mysql_connect("localhost", "root", "root");
 
@@ -26,40 +34,22 @@
    $message .= 'Whole query: ' . $query;
    die($message);
    }
-//This will be inserted into it's own php-----End
+   //This will be inserted into it's own php-----End
 
-    $filename = "SignUps2013.csv";
-    $new = (file_exists($filename));
+   //column names for now is id, question, correctAns, wrongAns1, wrongAns2, wrongAns3, level //level is ignored for now
+   $qListArr = array(array("id", "question", "correctAns", "wrongAns1", "wrongAns2", "wrongAns3"));
 
- 	$handle = fopen($filename, 'a');
-	$msg = "";
-	$stringToAdd="";
+   //get the last id
+   $lastId = 0;
+   while ($row = mysql_fetch_assoc($result)){
+   	 $lastId = $row['id'];
+   }
+   $lastId += 1;
 
-	if (!$new){
-		foreach($_POST as $name => $value) {
-			$stringToAdd.="$name,";
-		}
-		$stringToAdd.="\n";
-		$new=False;
-		fwrite($handle, $stringToAdd);
-	}
-	$stringToAdd="";
-	foreach($_POST as $name => $value) {
-		print "$name : $value<br>";
-		$msg .="$name : $value\n";
-		$stringToAdd.="$value,";
-	}
-	$stringToAdd.="\n";
+   $query = "INSERT INTO questions (id, question, correctAns, wrongAns1, wrongAns2, wrongAns3, level) VALUES ('$lastId','$_POST[questionEntered]', '$_POST[correctAnswer]', '$_POST[wrongAnswer1]', '$_POST[wrongAnswer2]', '$_POST[wrongAnswer3]', 0)";
 
-	fwrite($handle, $stringToAdd);
-	//now close the file
-	fclose($handle); 
+   mysql_query($query);
 
-	$headers = "From: ". $_POST["parent_name"] ."<".$_POST["usremail"]. ">\r\n";
-	
-	mail('migabreu@umich.edu', 'Registration', $msg,$headers);
+   echo "1 record added"; 
 
-
-
-	echo "Email sent";
 ?>

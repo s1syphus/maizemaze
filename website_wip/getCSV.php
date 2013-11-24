@@ -1,31 +1,14 @@
 <!DOCTYPE html>
 
-<!--
-
-
-	This is where you can delete/edit questions or whatever
-
-
--->
-
 <html>
 
 <head>
 
-<title> Check the questions </title>
-
-<link type="text/css" rel="stylesheet" href="css/mainSS.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<title>You're not suppose to be here</title>
 
 </head>
 
 <body>
-
-  <div id="top">
-    <a href="index.html"> <img src="images/maizeMazeLogoB.jpg" /> </a>
-  </div>
-
-	<h2> Questions are displayed below </h2>
 
 <?php 
 
@@ -57,30 +40,61 @@
    die($message);
    }
 
-   // display results 
-   while ($row = mysql_fetch_assoc($result)){
-   echo $row['question'];
-   echo "?";
-   echo "<br>";
-   echo $row['ansCorrect'];
-   echo " : ";
-   echo $row['ans2'];
-   echo " : ";
-   echo $row['ans3'];
-   echo " : ";
-   echo $row['ans4'];
-   echo "<br>";
-   echo "<br>";
+   // getting results
 
+   //column names for now is id, question, correctAns, wrongAns1, wrongAns2, wrongAns3
+   $qListArr = array(array("id", "question", "correctAns", "wrongAns1", "wrongAns2", "wrongAns3"));
+
+   while ($row = mysql_fetch_assoc($result)){
+   //$qArr = array($row['id']);
+   echo $row['id'];
+   echo ',';
+
+   //array_push($qArr, $row['question']);
+   echo $row['question'];
+   echo ',';
+
+   //array_push($qArr, $row['ansCorrect']);
+   echo $row['ansCorrect'];
+   echo ',';
+
+   //array_push($qArr, $row['ans2']);
+   echo $row['ans2'];
+   echo ',';
+
+   //array_push($qArr, $row['ans3']);
+   echo $row['ans3'];
+   echo ',';
+
+   //array_push($qArr, $row['ans4']);
+   echo $row['ans4'];
+   echo ',';
+
+   //array_push($qListArr, $qArr);
+   echo $row['subject'];
+   echo ',';
+
+   echo $row['level'];
+   echo ',';
+
+   echo $row['corAttempts'];
+   echo ',';
+
+   echo $row['attempts'];
+   echo '<br>';
    }
- 
+
+   
+
+   //print_r($qListArr);
+
+   //$jsonVar = json_encode($qListArr);
+
+   print_r($jsonVar);
+
    mysql_free_result($result);
 
 ?>
-
-	<form method="link" action="index.html">
-		<input type="submit" value="Back to main menu"/>
-	</form>
 
 </body>
 
