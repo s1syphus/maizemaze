@@ -1,13 +1,35 @@
-<?php
+<!DOCTYPE html>
 
-   $qArr = array();
-   foreach($_POST as $name => $value) {
-      array_push($qArr, $value);
-   }
+<!--
 
-   //print_r($qArr); //for testing
-	
-   //This will be inserted into it's own php-----
+
+	This is where you can delete/edit questions or whatever
+
+
+-->
+
+<html>
+
+<head>
+
+<title> Check the questions </title>
+
+<link type="text/css" rel="stylesheet" href="css/mainSS.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+  <div id="top">
+    <a href="index.html"> <img src="images/maizeMazeLogoB.jpg" /> </a>
+  </div>
+
+	<h2> Questions are displayed below </h2>
+
+<?php 
+
+
    // connects to mysql server 
    $db = mysql_connect("localhost", "root", "root");
 
@@ -34,25 +56,70 @@
    $message .= 'Whole query: ' . $query;
    die($message);
    }
-   //This will be inserted into it's own php-----End
 
-
-
-   //column names for now is id, question, ansCorrect, ans2, ans3, ans4, subject, level, corAttempts, attempts //subject, level, corAttempts, attempts are ignored for now
-   $qListArr = array(array("id", "question", "ansCorrect", "ans2", "ans3", "ans4", "subject", "level", "corAttempts", "attempts"));
-
-   //get the last id
-   $lastId = 0;
+   // display results 
    while ($row = mysql_fetch_assoc($result)){
-   	 $lastId = $row['id'];
+   echo $row['id'];
+   echo " : ";
+   echo $row['question'];
+   echo "?";
+   echo "<br>";
+   echo $row['ansCorrect'];
+   echo " : ";
+   echo $row['ans2'];
+   echo " : ";
+   echo $row['ans3'];
+   echo " : ";
+   echo $row['ans4'];
+   echo "<br>";
+   echo "<br>";
+
    }
-   $lastId += 1;
-
-
-   $query = "INSERT INTO questions (id, question, ansCorrect, ans2, ans3, ans4, subject, level, corAttempts, attempts) VALUES ('$lastId','$_POST[questionEntered]', '$_POST[correctAnswer]', '$_POST[wrongAnswer1]', '$_POST[wrongAnswer2]', '$_POST[wrongAnswer3]', 'test', 0, 0, 0)";
-
-   mysql_query($query);
-
-   echo "1 record added"; 
+ 
+   mysql_free_result($result);
 
 ?>
+
+<form method="post"
+      enctype="application/x-www-form-urlencode"
+      action="editDBEntry.php"
+      name="editEntry" novalidate>
+
+      <fieldset>
+	<label>id:</label>
+	<input type="text" name="editId"
+		placeholder="Type in the id" required>
+
+	<label>column:</label>
+	<input type="text" name="editColumn"
+		placeholder="Type in the column name" required>
+
+	<label>new text:</label>
+	<input type="text" name="editChange"
+		placeholder="Type in the change" required>
+	</fieldset>
+		<input type="submit" value="Edit the entry"/>
+</form>
+
+<form method="post"
+      enctype="application/x-www-form-urlencode"
+      action="deleteDBEntry.php"
+      name="editEntry" novalidate>
+
+      <fieldset>
+	<label>id:</label>
+	<input type="text" name="editId"
+		placeholder="Type in the id" required>
+	</fieldset>
+		<input type="submit" value="Delete the entry"/>
+</form>
+
+
+
+	<form method="link" action="index.html">
+		<input type="submit" value="Back to main menu"/>
+	</form>
+
+</body>
+
+</html>

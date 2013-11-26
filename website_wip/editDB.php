@@ -57,6 +57,22 @@
    die($message);
    }
 
+   // display options
+   echo "id";
+   echo " : ";
+   echo "Question";
+   echo "<br>";
+   echo "Correct Answer";
+   echo " : ";
+   echo "Wrong Answer 1";
+   echo " : ";
+   echo "Wrong Answer 2";
+   echo " : ";
+   echo "Wrong Answer 3";
+   echo "<br>";
+   echo "<br>";
+
+
    // display results 
    while ($row = mysql_fetch_assoc($result)){
    echo $row['id'];
@@ -91,9 +107,21 @@
 		placeholder="Type in the id" required>
 
 	<label>column:</label>
+
+	<select name="editColumn">
+	  <option value="question">Question</option>
+	  <option value="ansCorrect">Correct Answer</option>
+	  <option value="ans2">Incorrect Answer 1 </option>
+	  <option value="ans3">Incorrect Answer 2 </option>
+	  <option value="ans4">Incorrect Answer 3 </option>
+	  <option value="subject">Subject </option>
+	  <option value="level">Level </option>
+	  </select>
+
+<!--
 	<input type="text" name="editColumn"
 		placeholder="Type in the column name" required>
-
+-->
 	<label>new text:</label>
 	<input type="text" name="editChange"
 		placeholder="Type in the change" required>
