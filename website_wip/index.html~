@@ -19,15 +19,21 @@
 
 <head>
 
-<title> index </title>
+<title>Maize Maze Web</title>
+
+<link type="text/css" rel="stylesheet" href="css/mainSS.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 </head>
 
 
 <body>
 
-	<h1> Welcome to MaizeMaze's Web Interface </h1>
+<!-- <?php include("header.php"); ?> -->
 
+<!--  <h1> Welcome to MaizeMaze's Web Interface </h1> -->
+
+<img src="images/maizeMazeLogoB.jpg" />
 
 <form method="link" action="enterQuestions.html">
 <input type="submit" value="Add Questions to Database"/>
