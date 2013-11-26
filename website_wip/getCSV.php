@@ -81,7 +81,7 @@
    echo ',';
 
    echo $row['attempts'];
-   echo '<br>';
+   echo ',';
    }
 
    

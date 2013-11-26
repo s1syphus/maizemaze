@@ -46,25 +46,49 @@
    $qListArr = array(array("id", "question", "correctAns", "wrongAns1", "wrongAns2", "wrongAns3"));
 
    while ($row = mysql_fetch_assoc($result)){
-   $qArr = array($row['id']);
+   //$qArr = array($row['id']);
+   echo $row['id'];
+   echo ',';
 
-   array_push($qArr, $row['question']);
-   
-   array_push($qArr, $row['correctAns']);
+   //array_push($qArr, $row['question']);
+   echo $row['question'];
+   echo ',';
 
-   array_push($qArr, $row['wrongAns1']);
+   //array_push($qArr, $row['ansCorrect']);
+   echo $row['ansCorrect'];
+   echo ',';
 
-   array_push($qArr, $row['wrongAns2']);
+   //array_push($qArr, $row['ans2']);
+   echo $row['ans2'];
+   echo ',';
 
-   array_push($qArr, $row['wrongAns3']);
+   //array_push($qArr, $row['ans3']);
+   echo $row['ans3'];
+   echo ',';
 
-   array_push($qListArr, $qArr);
+   //array_push($qArr, $row['ans4']);
+   echo $row['ans4'];
+   echo ',';
 
+   //array_push($qListArr, $qArr);
+   echo $row['subject'];
+   echo ',';
+
+   echo $row['level'];
+   echo ',';
+
+   echo $row['corAttempts'];
+   echo ',';
+
+   echo $row['attempts'];
+   echo '<br>';
    }
+
+   
 
    //print_r($qListArr);
 
-   $jsonVar = json_encode($qListArr);
+   //$jsonVar = json_encode($qListArr);
 
    print_r($jsonVar);
 
