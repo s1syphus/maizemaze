@@ -1,4 +1,8 @@
 <?php
+  header('refresh:1; ' . $_SERVER['HTTP_REFERER']);
+?>
+
+<?php
 
    $qArr = array();
    foreach($_POST as $name => $value) {

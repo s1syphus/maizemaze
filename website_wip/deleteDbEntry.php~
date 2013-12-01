@@ -36,21 +36,7 @@
    }
    //This will be inserted into it's own php-----End
 
-
-   /*
-   //column names for now is id, question, ansCorrect, ans2, ans3, ans4, subject, level, corAttempts, attempts //subject, level, corAttempts, attempts are ignored for now
-   $qListArr = array(array("id", "question", "ansCorrect", "ans2", "ans3", "ans4", "subject", "level", "corAttempts", "attempts"));
-
-   //get the last id
-   $lastId = 0;
-   while ($row = mysql_fetch_assoc($result)){
-   	 $lastId = $row['id'];
-   }
-   $lastId += 1;
-
-*/
-
-   $query = "DELETE FROM questions WHERE '$_POST[editId]'";
+   $query = "DELETE FROM questions WHERE id='$_POST[editId]'";
 
    mysql_query($query);
 

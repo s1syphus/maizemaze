@@ -26,16 +26,33 @@
 
 </head>
 
-
 <body>
 
-<!-- <?php include("header.php"); ?> -->
+<!-- header -->
+<?php include("header.php"); ?>
 
 <!--  <h1> Welcome to MaizeMaze's Web Interface </h1> -->
 
 <img src="images/maizeMazeLogoB.jpg" />
 
-<form method="link" action="enterQuestions.html">
+<div class="mButton">
+  <a href="enterQuestions.php">Add Questions to the Database</a>
+</div>
+
+<div class="mButton">
+  <a href="examineQuestions.php">Examine Database Questions</a>
+</div>
+
+<div class="mButton">
+  <a href="editDB.php">Edit Database Questions</a>
+</div>
+
+<div class="mButton">
+  <a href="prettyAnalytics.php">Analytical Data</a>
+</div>
+
+<!--
+<form method="link" action="enterQuestions.php">
 <input type="submit" value="Add Questions to Database"/>
 </form>
 
@@ -47,9 +64,12 @@
 	<input type="submit" value="Edit The Database Questions"/>
 </form>
 
-<form method="link" action="prettyAnalytics.html">
+<form method="link" action="prettyAnalytics.php">
 	<input type="submit" value="Show me the Pretty Analytics"/>
 </form>
+-->
+<!-- footer -->
+<?php include("footer.php"); ?>
 
 </body>
 

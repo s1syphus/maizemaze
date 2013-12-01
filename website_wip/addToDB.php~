@@ -36,8 +36,8 @@
    }
    //This will be inserted into it's own php-----End
 
-   //column names for now is id, question, correctAns, wrongAns1, wrongAns2, wrongAns3, level //level is ignored for now
-   $qListArr = array(array("id", "question", "correctAns", "wrongAns1", "wrongAns2", "wrongAns3"));
+   //column names for now is id, question, ansCorrect, ans2, ans3, ans4, subject, level, corAttempts, attempts //subject, level, corAttempts, attempts are ignored for now
+   $qListArr = array(array("id", "question", "ansCorrect", "ans2", "ans3", "ans4", "subject", "level", "corAttempts", "attempts"));
 
    //get the last id
    $lastId = 0;
@@ -46,7 +46,8 @@
    }
    $lastId += 1;
 
-   $query = "INSERT INTO questions (id, question, correctAns, wrongAns1, wrongAns2, wrongAns3, level) VALUES ('$lastId','$_POST[questionEntered]', '$_POST[correctAnswer]', '$_POST[wrongAnswer1]', '$_POST[wrongAnswer2]', '$_POST[wrongAnswer3]', 0)";
+
+   $query = "INSERT INTO questions (id, question, ansCorrect, ans2, ans3, ans4, subject, level, corAttempts, attempts) VALUES ('$lastId','$_POST[questionEntered]', '$_POST[correctAnswer]', '$_POST[wrongAnswer1]', '$_POST[wrongAnswer2]', '$_POST[wrongAnswer3]', 'test', 0, 0, 0)";
 
    mysql_query($query);
 

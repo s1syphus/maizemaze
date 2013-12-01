@@ -1,0 +1,5 @@
+<footer>
+<?php
+echo "<p>Last updated: 11-29-2013</p>";
+?>
+</footer>

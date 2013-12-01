@@ -1,5 +1,9 @@
 <?php
+  //header( 'refresh:1; location:'.__DIR__.'/editDB.php');
+  header('refresh:1; ' . $_SERVER['HTTP_REFERER']);
+?>
 
+<?php
    $qArr = array();
    foreach($_POST as $name => $value) {
       array_push($qArr, $value);
@@ -84,5 +88,4 @@
 	  echo "entry has been edited"; 
      }
    }
-
 ?>

@@ -15,18 +15,16 @@
 <title> Check the questions </title>
 
 <link type="text/css" rel="stylesheet" href="css/mainSS.css">
+<link type="text/css" rel="stylesheet" href="css/subSS.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
 </head>
 
 <body>
-
-  <div id="top">
-    <a href="index.html"> <img src="images/maizeMazeLogoB.jpg" /> </a>
-  </div>
-
+<?php include("header.php"); ?>
+<div id="content">
+<div id="cHeader">
 	<h2> Questions are displayed below </h2>
-
+</div>
 <?php 
 
 
@@ -129,6 +127,8 @@
 		<input type="submit" value="Edit the entry"/>
 </form>
 
+<br>
+
 <form method="post"
       enctype="application/x-www-form-urlencode"
       action="deleteDBEntry.php"
@@ -142,11 +142,13 @@
 		<input type="submit" value="Delete the entry"/>
 </form>
 
+<br>
 
-
-	<form method="link" action="index.html">
-		<input type="submit" value="Back to main menu"/>
-	</form>
+<form method="link" action="index.php">
+	<input type="submit" value="Back to main menu"/>
+</form>
+</div>
+<?php include("footer.php"); ?>
 
 </body>
 

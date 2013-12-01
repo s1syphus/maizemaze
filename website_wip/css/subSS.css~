@@ -1,0 +1,13 @@
+#content {
+     background-color: rgb(0,0,102);
+     color: rgb(255,255,255);
+     margin: 10px;
+     border: 1px solid white;
+     border-radius: 20px;
+     padding: 10px;
+}
+
+#content #cHeader {
+	 display: block;
+	 text-align: center;
+}

@@ -1,3 +1,85 @@
-background {
-	   color: 0, 0, 102;
+body {
+     background-color: rgb(0,0,102);
+     color: rgb(255,255,255);
+     margin: 10px;
+}
+
+header img {
+   height:75px;
+   
+}
+
+nav {
+    display:inline;
+    position: relative;
+    bottom: 33px;
+    margin-left: 10px;
+}
+
+header nav a{
+       font-size:12;
+       padding: 30px 2% 30px 2%;
+       //background-color: white;
+       margin: 0 auto;
+       text-decoration:none;
+       border-left:1px solid #ffcc33;
+       //display:block;
+       //float:left;
+}
+
+header nav a:visited {
+       color:white;
+}
+
+header nav a:link {
+       color:white;
+}
+
+header nav a:hover {
+       color:#ffcc33;
+       background-color:#000080;
+}
+
+
+
+header {
+//       background-color:black;
+       padding:5px 0px 0px 5px;
+}
+
+footer {
+//       background-color:black;
+       padding:5px;
+}
+
+footer p:first-child {
+       float:right;
+}
+
+.mButton {
+	background-color: #000080;
+	height: 20px;
+	border: 1px solid #ffcc33;
+	padding: 10px 0px 10px 0px;
+	border-radius: 20px;
+	margin: 7px;
+}
+
+.mButton a {
+	 font-size: 20px;
+	 display: block;
+	 text-align: center;
+	 text-decoration: none;
+}
+
+.mButton a:visited {
+       color:white;
+}
+
+.mButton a:link {
+       color:white;
+}
+
+.mButton a:hover {
+       color:#ffcc33;
 }

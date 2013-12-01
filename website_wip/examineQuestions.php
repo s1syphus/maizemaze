@@ -15,18 +15,18 @@
 <title> Check the questions </title>
 
 <link type="text/css" rel="stylesheet" href="css/mainSS.css">
+<link type="text/css" rel="stylesheet" href="css/subSS.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
 </head>
 
 <body>
 
-  <div id="top">
-    <a href="index.html"> <img src="images/maizeMazeLogoB.jpg" /> </a>
-  </div>
+<?php include("header.php"); ?>
 
+<div id="content">
+  <div id="cHeader">
 	<h2> Questions are displayed below </h2>
-
+  </div>
 <?php 
 
 
@@ -78,10 +78,11 @@
 
 ?>
 
-	<form method="link" action="index.html">
+	<form method="link" action="index.php">
 		<input type="submit" value="Back to main menu"/>
 	</form>
-
+</div>
+<?php include("footer.php"); ?>
 </body>
 
 </html>
