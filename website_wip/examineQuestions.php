@@ -45,7 +45,7 @@
    }
 
    // variable for the sql query 
-   $query = sprintf("SELECT * FROM questions");
+   $query = sprintf("SELECT * FROM questions ORDER BY subject ASC");
 
    // results variable for the sql query 
    $result = mysql_query($query);
@@ -59,6 +59,8 @@
 
    // display results 
    while ($row = mysql_fetch_assoc($result)){
+   echo $row['subject'];
+   echo "<br>";
    echo $row['question'];
    echo "?";
    echo "<br>";
@@ -71,7 +73,6 @@
    echo $row['ans4'];
    echo "<br>";
    echo "<br>";
-
    }
  
    mysql_free_result($result);

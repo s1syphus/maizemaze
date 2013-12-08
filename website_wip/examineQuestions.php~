@@ -81,8 +81,8 @@
 	<form method="link" action="index.php">
 		<input type="submit" value="Back to main menu"/>
 	</form>
-<?php include("footer.php"); ?>
 </div>
+<?php include("footer.php"); ?>
 </body>
 
 </html>

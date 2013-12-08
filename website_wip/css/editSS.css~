@@ -5,7 +5,3 @@ label {
 input {
       margin: 8px 20px 8px 0px;
 }
-
-fieldset input {
-	 width:70%;
-}
