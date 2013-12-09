@@ -51,7 +51,7 @@
    $lastId += 1;
 
 
-   $query = "INSERT INTO questions (id, question, ansCorrect, ans2, ans3, ans4, subject, level, corAttempts, attempts) VALUES ('$lastId','$_POST[questionEntered]', '$_POST[correctAnswer]', '$_POST[wrongAnswer1]', '$_POST[wrongAnswer2]', '$_POST[wrongAnswer3]', '$_POST[subject]', 0, 0, 0)";
+   $query = "INSERT INTO questions (id, question, ansCorrect, ans2, ans3, ans4, subject, level, corAttempts, attempts) VALUES ('$lastId','$_POST[questionEntered]', '$_POST[correctAnswer]', '$_POST[wrongAnswer1]', '$_POST[wrongAnswer2]', '$_POST[wrongAnswer3]', '$_POST[subject]', '$_POST[level]', 0, 0)";
 
    mysql_query($query);
 

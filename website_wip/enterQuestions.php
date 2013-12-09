@@ -43,11 +43,11 @@
 			<label>Subject:</label>
 			<input type="text" style="width:30%;" name="subject"
 				placeholder="Subject" required>
-<!--
+
 			<label>Difficulty Level (1-120):</label>
-			<input type="number" style="width:10%;" name="difficulty"
-				min="1" max="120" required>
--->
+			<input type="number" style="width:10%;" name="level"
+			       placeholder="1" min="1" max="120" required>
+
 			<br>
 
 			<label>Question:</label>

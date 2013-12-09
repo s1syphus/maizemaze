@@ -60,6 +60,8 @@
    echo "id";
    echo " : ";
    echo "Subject";
+   echo " : ";
+   echo "Difficulty";
    echo "<br>";
    echo "Question";
    echo "<br>";
@@ -79,6 +81,8 @@
    echo $row['id'];
    echo " : ";
    echo $row['subject'];
+   echo " : ";
+   echo $row['level'];
    echo "<br>";
    echo $row['question'];
    echo "?";
@@ -118,7 +122,7 @@
 	  <option value="ans3">Incorrect Answer 2 </option>
 	  <option value="ans4">Incorrect Answer 3 </option>
 	  <option value="subject">Subject </option>
-<!--	  <option value="level">Level </option> -->
+	  <option value="level">Difficulty </option>
 	  </select>
 
 <!--

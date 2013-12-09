@@ -36,16 +36,24 @@
       enctype="application/x-www-form-urlencode"
       action="addToDB.php"
       name="WSORform" novalidate>
+
 		<fieldset>
 			<!--Add alignment stuff soon-->
+
+			<label>Subject:</label>
+			<input type="text" style="width:30%;" name="subject"
+				placeholder="Subject" required>
+<!--
+			<label>Difficulty Level (1-120):</label>
+			<input type="number" style="width:10%;" name="difficulty"
+				min="1" max="120" required>
+-->
+			<br>
+
 			<label>Question:</label>
 			<input type="text" name="questionEntered"
 				placeholder="Type your question" required>
-<!--
-			<label>Difficulty Level (1-120):</label>
-			<input type="number" name="difficulty"
-				min="1" max="120" required>
--->
+
 				<br>
 			<label>Correct Answer:</label>
 			<input type="text" name="correctAnswer"

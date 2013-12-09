@@ -57,9 +57,32 @@
    die($message);
    }
 
+   // display options
+   echo "id";
+   echo " : ";
+   echo "Subject";
+   echo " : ";
+   echo "Difficulty";
+   echo "<br>";
+   echo "Question";
+   echo "<br>";
+   echo "Correct Answer";
+   echo " : ";
+   echo "Wrong Answer 1";
+   echo " : ";
+   echo "Wrong Answer 2";
+   echo " : ";
+   echo "Wrong Answer 3";
+   echo "<br>";
+   echo "<br>";
+
    // display results 
    while ($row = mysql_fetch_assoc($result)){
+   echo $row['id'];
+   echo " : ";
    echo $row['subject'];
+   echo " : ";
+   echo $row['level'];   
    echo "<br>";
    echo $row['question'];
    echo "?";
